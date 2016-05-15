@@ -1,6 +1,6 @@
 package com.chriswarrick.numbernamer;
 
-/* Number Namer v0.1.0
+/* Number Namer v0.2.0
  * Copyright © 2016, Chris Warrick.
  * All rights reserved.
  *

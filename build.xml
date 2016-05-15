@@ -1,0 +1,32 @@
+<project default="jar">
+
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="bin"/>
+        <javac includeantruntime="false" srcdir="src" destdir="bin"/>
+    </target>
+
+    <target name="jar" depends="compile">
+        <jar destfile="jar/NumberNamer.jar" basedir="bin">
+            <manifest>
+                <attribute name="Main-Class" value="com.chriswarrick.numbernamer.NamerGUI"/>
+            </manifest>
+        </jar>
+        <jar destfile="jar/NumberNamer-console.jar" basedir="bin">
+            <manifest>
+                <attribute name="Main-Class" value="com.chriswarrick.numbernamer.NamerConsole"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="run" depends="jar">
+        <java jar="jar/NumberNamer.jar" fork="true"/>
+    </target>
+
+    <target name="javadoc">
+        <javadoc access="private" author="true" classpath="." destdir="docs" doctitle="NumberNamer" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" packagenames="com.chriswarrick.numbernamer" source="1.8" sourcepath="src" splitindex="true" use="true" version="true"/>
+    </target>
+</project>

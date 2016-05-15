@@ -1,4 +1,4 @@
-Number Namer v0.1.0
+Number Namer v0.2.0
 ===================
 
 This is a very simple number namer, written in Java.
@@ -16,7 +16,7 @@ that use similar rules to those languages.
 Interfaces
 ----------
 
-Currently comes with a console interface in `com.chriswarrick.numbernamer.NamerConsole`.
+Currently comes with a console interface in `com.chriswarrick.numbernamer.NamerConsole` and a GUI interface in `com.chriswarrick.numbernamer.NamerGUI`.
 
 License (3-clause BSD)
 ----------------------
