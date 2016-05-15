@@ -58,6 +58,7 @@ public abstract class ThousandGroupedNumberNamer extends NumberNamer {
         }
 
         int groupValue, gH, gT, gO, gTO;
+        boolean namedTO;
         for (int i = groups.size() - 1; i >= 0; i--) {
             groupValue = groups.get(i).intValue();
             if (groupValue != 0) {
@@ -74,11 +75,11 @@ public abstract class ThousandGroupedNumberNamer extends NumberNamer {
                     }
                 }
 
-                nameTO(gTO, gT, gO, i, sb);
+                namedTO = nameTO(gTO, gT, gO, i, sb);
 
                 // last group does not need naming
                 if (i != 0) {
-                    if (separatorGN != '\0') {
+                    if (separatorGN != '\0' && namedTO) {
                         sb.append(separatorGN);
                     }
                     sb.append(nameGroup(i, groupValue));

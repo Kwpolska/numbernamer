@@ -89,6 +89,7 @@ public abstract class NumberNamer {
      *            Index of the group (used for special casing)
      * @param sb
      *            StringBuilder instance (output)
+     * @return true if buffer was changed, false otherwise
      */
-    protected abstract void nameTO(int tenOne, int ten, int one, int groupIndex, StringBuilder sb);
+    protected abstract boolean nameTO(int tenOne, int ten, int one, int groupIndex, StringBuilder sb);
 }

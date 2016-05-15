@@ -50,10 +50,10 @@ public class PolishNumberNamer extends ThousandGroupedNumberNamer {
         sb.append(hundreds[hundred]);
     }
 
-    protected void nameTO(int tenOne, int ten, int one, int groupIndex, StringBuilder sb) {
+    protected boolean nameTO(int tenOne, int ten, int one, int groupIndex, StringBuilder sb) {
         // special casing for group tens/ones
         if (groupIndex != 0 && tenOne == 1)
-            return;
+            return false;
         if (tenOne >= 20) {
             sb.append(tens[ten]);
             if (one != 0) {
@@ -63,5 +63,6 @@ public class PolishNumberNamer extends ThousandGroupedNumberNamer {
         } else if (tenOne != 0) {
             sb.append(zeroToNineteen[tenOne]);
         }
+        return true;
     }
 }

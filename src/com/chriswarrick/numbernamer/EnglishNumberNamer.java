@@ -42,7 +42,7 @@ public class EnglishNumberNamer extends ThousandGroupedNumberNamer {
         sb.append(hundredWord);
     }
 
-    protected void nameTO(int tenOne, int ten, int one, int groupIndex, StringBuilder sb) {
+    protected boolean nameTO(int tenOne, int ten, int one, int groupIndex, StringBuilder sb) {
         if (tenOne >= 20) {
             sb.append(tens[ten]);
             if (one != 0) {
@@ -52,5 +52,6 @@ public class EnglishNumberNamer extends ThousandGroupedNumberNamer {
         } else if (tenOne != 0) {
             sb.append(zeroToNineteen[tenOne]);
         }
+        return true;
     }
 }

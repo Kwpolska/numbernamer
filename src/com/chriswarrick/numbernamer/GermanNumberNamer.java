@@ -46,12 +46,12 @@ public class GermanNumberNamer extends ThousandGroupedNumberNamer {
         sb.append(hundredWord);
     }
 
-    protected void nameTO(int tenOne, int ten, int one, int groupIndex, StringBuilder sb) {
+    protected boolean nameTO(int tenOne, int ten, int one, int groupIndex, StringBuilder sb) {
         if (tenOne == 1 && groupIndex > 1) {
             sb.append("ein");
-            return;
+            return true;
         } else if (tenOne == 1 && groupIndex == 1) {
-            return;
+            return false;
         } else if (tenOne >= 20) {
             if (one == 1) {
                 sb.append("einund");
@@ -63,5 +63,6 @@ public class GermanNumberNamer extends ThousandGroupedNumberNamer {
         } else if (tenOne != 0) {
             sb.append(zeroToNineteen[tenOne]);
         }
+        return true;
     }
 }
