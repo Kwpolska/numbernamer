@@ -15,18 +15,19 @@ public class PolishNumberNamer extends ThousandGroupedNumberNamer {
             null, "sto", "dwieście", "trzysta", "czterysta", "pięćset", "sześćset", "siedemset",
             "osiemset", "dziewięćset"
     };
-    static {
-        zeroToNineteen = new String[] {
-                "zero", "jeden", "dwa", "trzy", "cztery",
-                "pięć", "sześć", "siedem", "osiem", "dziewięć",
-                "dziesięć", "jedenaście", "dwanaście", "trzynaście", "czternaście",
-                "piętnaście", "szesnaście", "siedemnaście", "osiemnaście", "dziewiętnaście"
-        };
-        tens = new String[] {
-                null, null, "dwadzieścia", "trzydzieści", "czterdzieści",
-                "pięćdziesiąt", "sześćdziesiąt", "siedemdziesiąt", "osiemdziesiąt",
-                "dziewięćdziesiąt"
-        };
+    private static String[] zeroToNineteen = new String[] {
+            "zero", "jeden", "dwa", "trzy", "cztery",
+            "pięć", "sześć", "siedem", "osiem", "dziewięć",
+            "dziesięć", "jedenaście", "dwanaście", "trzynaście", "czternaście",
+            "piętnaście", "szesnaście", "siedemnaście", "osiemnaście", "dziewiętnaście"
+    };
+    private static String[] tens = new String[] {
+            null, null, "dwadzieścia", "trzydzieści", "czterdzieści",
+            "pięćdziesiąt", "sześćdziesiąt", "siedemdziesiąt", "osiemdziesiąt",
+            "dziewięćdziesiąt"
+    };
+
+    public PolishNumberNamer() {
         negativeWordSpace = "minus ";
         separatorTO = ' ';
         separatorHT = ' ';

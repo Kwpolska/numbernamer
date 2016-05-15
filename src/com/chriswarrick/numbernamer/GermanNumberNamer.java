@@ -1,6 +1,7 @@
 package com.chriswarrick.numbernamer;
 
 /** The number namer for English. */
+/** The number namer for German. */
 public class GermanNumberNamer extends ThousandGroupedNumberNamer {
     private static String hundredWord = "hundert";
     private static String[] groupNames = new String[] {
@@ -11,18 +12,18 @@ public class GermanNumberNamer extends ThousandGroupedNumberNamer {
             null, "tausend", " Milionen", " Miliarden", " Billionen", " Billarden", " Trillionen",
             " Trilliarden"
     };
-    static {
-        zeroToNineteen = new String[] {
-                "null", "eins", "zwei", "drei", "vier",
-                "fünf", "sechs", "sieben", "acht", "neun",
-                "zehn", "elf", "zwölf", "dreizehn", "vierzehn",
-                "fünfzehn", "sechzehn", "siebzehn", "achtzehn", "neunzehn"
-        };
-        tens = new String[] {
-                null, null, "zwanzig", "dreißig", "vierzig",
-                "fünfzig", "sechzig", "siebzig", "achtzig", "neunzig"
-        };
+    private static String[] zeroToNineteen = new String[] {
+            "null", "eins", "zwei", "drei", "vier",
+            "fünf", "sechs", "sieben", "acht", "neun",
+            "zehn", "elf", "zwölf", "dreizehn", "vierzehn",
+            "fünfzehn", "sechzehn", "siebzehn", "achtzehn", "neunzehn"
+    };
+    private static String[] tens = new String[] {
+            null, null, "zwanzig", "dreißig", "vierzig",
+            "fünfzig", "sechzig", "siebzig", "achtzig", "neunzig"
+    };
 
+    public GermanNumberNamer() {
         negativeWordSpace = "minus ";
         separatorHT = '\0';
         separatorG = '\0';

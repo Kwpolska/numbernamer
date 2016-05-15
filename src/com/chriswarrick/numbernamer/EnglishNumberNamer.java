@@ -10,18 +10,18 @@ public class EnglishNumberNamer extends ThousandGroupedNumberNamer {
     };
     /** Separator between hundreds value and the word for hundred */
     private static char separatorHW = ' ';
-    static {
-        zeroToNineteen = new String[] {
-                "zero", "one", "two", "three", "four",
-                "five", "six", "seven", "eight", "nine",
-                "ten", "eleven", "twelve", "thirteen", "fourteen",
-                "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"
-        };
-        tens = new String[] {
-                null, null, "twenty", "thirty", "forty",
-                "fifty", "sixty", "seventy", "eighty", "ninety"
-        };
+    private static String[] zeroToNineteen = new String[] {
+            "zero", "one", "two", "three", "four",
+            "five", "six", "seven", "eight", "nine",
+            "ten", "eleven", "twelve", "thirteen", "fourteen",
+            "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"
+    };
+    private static String[] tens = new String[] {
+            null, null, "twenty", "thirty", "forty",
+            "fifty", "sixty", "seventy", "eighty", "ninety"
+    };
 
+    public EnglishNumberNamer() {
         negativeWordSpace = "minus ";
         separatorTO = '-';
         separatorHT = ' ';
