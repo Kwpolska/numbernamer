@@ -35,6 +35,11 @@ package com.chriswarrick.numbernamer;
 
 /** The base for all number namers. */
 public abstract class NumberNamer {
+    /** Minimum number */
+    public final long MIN = Long.MIN_VALUE + 1;
+    /** Maximum number */
+    public final long MAX = Long.MAX_VALUE;
+
     /**
      * Name a number.
      *
