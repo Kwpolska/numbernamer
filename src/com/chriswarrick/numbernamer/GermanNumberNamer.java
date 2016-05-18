@@ -1,6 +1,6 @@
 package com.chriswarrick.numbernamer;
 
-/* Number Namer v0.2.0
+/* Number Namer v0.2.1
  * Copyright © 2016, Chris Warrick.
  * All rights reserved.
  *
@@ -44,12 +44,6 @@ public class GermanNumberNamer extends ThousandGroupedNumberNamer {
             null, "tausend", " Milionen", " Miliarden", " Billionen", " Billarden", " Trillionen",
             " Trilliarden"
     };
-    private static String[] zeroToNineteen = new String[] {
-            "null", "eins", "zwei", "drei", "vier",
-            "fünf", "sechs", "sieben", "acht", "neun",
-            "zehn", "elf", "zwölf", "dreizehn", "vierzehn",
-            "fünfzehn", "sechzehn", "siebzehn", "achtzehn", "neunzehn"
-    };
     private static String[] tens = new String[] {
             null, null, "zwanzig", "dreißig", "vierzig",
             "fünfzig", "sechzig", "siebzig", "achtzig", "neunzig"
@@ -60,6 +54,12 @@ public class GermanNumberNamer extends ThousandGroupedNumberNamer {
         separatorHT = '\0';
         separatorG = '\0';
         separatorGN = '\0';
+        zeroToNineteen = new String[] {
+                "null", "eins", "zwei", "drei", "vier",
+                "fünf", "sechs", "sieben", "acht", "neun",
+                "zehn", "elf", "zwölf", "dreizehn", "vierzehn",
+                "fünfzehn", "sechzehn", "siebzehn", "achtzehn", "neunzehn"
+        };
     }
 
     protected String nameGroup(int groupIndex, int groupValue) {

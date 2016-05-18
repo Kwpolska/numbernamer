@@ -1,6 +1,6 @@
 package com.chriswarrick.numbernamer;
 
-/* Number Namer v0.2.0
+/* Number Namer v0.2.1
  * Copyright © 2016, Chris Warrick.
  * All rights reserved.
  *
@@ -48,12 +48,6 @@ public class PolishNumberNamer extends ThousandGroupedNumberNamer {
             null, "sto", "dwieście", "trzysta", "czterysta", "pięćset", "sześćset", "siedemset",
             "osiemset", "dziewięćset"
     };
-    private static String[] zeroToNineteen = new String[] {
-            "zero", "jeden", "dwa", "trzy", "cztery",
-            "pięć", "sześć", "siedem", "osiem", "dziewięć",
-            "dziesięć", "jedenaście", "dwanaście", "trzynaście", "czternaście",
-            "piętnaście", "szesnaście", "siedemnaście", "osiemnaście", "dziewiętnaście"
-    };
     private static String[] tens = new String[] {
             null, null, "dwadzieścia", "trzydzieści", "czterdzieści",
             "pięćdziesiąt", "sześćdziesiąt", "siedemdziesiąt", "osiemdziesiąt",
@@ -66,6 +60,12 @@ public class PolishNumberNamer extends ThousandGroupedNumberNamer {
         separatorHT = ' ';
         separatorG = ' ';
         separatorGN = ' ';
+        zeroToNineteen = new String[] {
+                "zero", "jeden", "dwa", "trzy", "cztery",
+                "pięć", "sześć", "siedem", "osiem", "dziewięć",
+                "dziesięć", "jedenaście", "dwanaście", "trzynaście", "czternaście",
+                "piętnaście", "szesnaście", "siedemnaście", "osiemnaście", "dziewiętnaście"
+        };
     }
 
     protected String nameGroup(int groupIndex, int groupValue) {

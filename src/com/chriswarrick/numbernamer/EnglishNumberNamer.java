@@ -1,6 +1,6 @@
 package com.chriswarrick.numbernamer;
 
-/* Number Namer v0.2.0
+/* Number Namer v0.2.1
  * Copyright © 2016, Chris Warrick.
  * All rights reserved.
  *
@@ -43,12 +43,6 @@ public class EnglishNumberNamer extends ThousandGroupedNumberNamer {
     };
     /** Separator between hundreds value and the word for hundred */
     private static char separatorHW = ' ';
-    private static String[] zeroToNineteen = new String[] {
-            "zero", "one", "two", "three", "four",
-            "five", "six", "seven", "eight", "nine",
-            "ten", "eleven", "twelve", "thirteen", "fourteen",
-            "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"
-    };
     private static String[] tens = new String[] {
             null, null, "twenty", "thirty", "forty",
             "fifty", "sixty", "seventy", "eighty", "ninety"
@@ -60,6 +54,12 @@ public class EnglishNumberNamer extends ThousandGroupedNumberNamer {
         separatorHT = ' ';
         separatorG = ' ';
         separatorGN = ' ';
+        zeroToNineteen = new String[] {
+                "zero", "one", "two", "three", "four",
+                "five", "six", "seven", "eight", "nine",
+                "ten", "eleven", "twelve", "thirteen", "fourteen",
+                "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"
+        };
     }
 
     protected String nameGroup(int groupIndex, int groupValue) {

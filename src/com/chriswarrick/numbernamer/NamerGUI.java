@@ -1,6 +1,6 @@
 package com.chriswarrick.numbernamer;
 
-/* Number Namer v0.2.0
+/* Number Namer v0.2.1
  * Copyright © 2016, Chris Warrick.
  * All rights reserved.
  *
@@ -46,6 +46,7 @@ public class NamerGUI extends javax.swing.JFrame {
     private static final long serialVersionUID = 1L;
     NumberNamer namer;
     Random r;
+    private static String EINVNUMBER;
     /**
      * Creates new form NamerGUI
      */
@@ -67,6 +68,7 @@ public class NamerGUI extends javax.swing.JFrame {
 
         namer = new EnglishNumberNamer(); // default namer
         r = new Random();
+        EINVNUMBER = String.format("Invalid number (must be between %d and %d)", namer.MIN, namer.MAX);
     }
 
     /**
@@ -175,16 +177,19 @@ public class NamerGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_languageBoxItemStateChanged
 
     private void run() {
-        if (numberBox.getText().equals("")) {
+        String inp = numberBox.getText().trim();
+        if (inp.equals("")) {
             outBox.setText("");
             return;
         }
         try {
-            String out = namer.name(Long.parseLong(numberBox.getText()));
+            String out = namer.name(Long.parseLong(inp));
             outBox.setText(out);
+        } catch (NumberFormatException ex) {
+            JOptionPane.showMessageDialog(this, EINVNUMBER, "Error", JOptionPane.ERROR_MESSAGE);
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(this, ex, "Error", JOptionPane.ERROR_MESSAGE);
-        }
+            }
 
     }
 
