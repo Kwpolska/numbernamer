@@ -1,7 +1,8 @@
 v0.2.2
 ======
 
-* Remove special casing for 100 in English (now “one hundred”)
+* Remove special casing for 100 in English (now “one hundred”).
+* Distribution: add JARs for Java 7.
 
 v0.2.1
 ======
