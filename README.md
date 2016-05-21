@@ -16,7 +16,11 @@ that use similar rules to those languages.
 Interfaces
 ----------
 
-Currently comes with a console interface in `com.chriswarrick.numbernamer.NamerConsole` and a GUI interface in `com.chriswarrick.numbernamer.NamerGUI`.
+* Built-in ([Releases](https://github.com/Kwpolska/numbernamer/releases))
+  * Console: `NumberNamer-console.jar`
+  * GUI: `NumberNamer-console.jar`
+* [Android](https://github.com/Kwpolska/numbernamer.android)
+  ([Releases](https://github.com/Kwpolska/numbernamer.android/releases))
 
 License (3-clause BSD)
 ----------------------
