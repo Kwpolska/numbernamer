@@ -1,5 +1,4 @@
 <project default="jar">
-
     <target name="clean">
         <delete dir="bin"/>
     </target>
@@ -16,6 +15,24 @@
             </manifest>
         </jar>
         <jar destfile="jar/NumberNamer-console.jar" basedir="bin">
+            <manifest>
+                <attribute name="Main-Class" value="com.chriswarrick.numbernamer.NamerConsole"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="compile7">
+        <mkdir dir="bin7"/>
+        <javac includeantruntime="false" srcdir="src" destdir="bin7" target="1.7" source="1.7"/>
+    </target>
+
+    <target name="jar7" depends="compile7">
+        <jar destfile="jar/NumberNamer-java7.jar" basedir="bin7">
+            <manifest>
+                <attribute name="Main-Class" value="com.chriswarrick.numbernamer.NamerGUI"/>
+            </manifest>
+        </jar>
+        <jar destfile="jar/NumberNamer-console-java7.jar" basedir="bin7">
             <manifest>
                 <attribute name="Main-Class" value="com.chriswarrick.numbernamer.NamerConsole"/>
             </manifest>

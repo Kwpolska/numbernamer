@@ -1,6 +1,6 @@
 package com.chriswarrick.numbernamer;
 
-/* Number Namer v0.2.1
+/* Number Namer v0.2.2
  * Copyright © 2016, Chris Warrick.
  * All rights reserved.
  *
@@ -67,11 +67,8 @@ public class EnglishNumberNamer extends ThousandGroupedNumberNamer {
     }
 
     protected void nameHundred(int hundred, StringBuilder sb) {
-        if (hundred != 1) {
-            // special casing: 100 → hundred
-            sb.append(zeroToNineteen[hundred]);
-            sb.append(separatorHW);
-        }
+        sb.append(zeroToNineteen[hundred]);
+        sb.append(separatorHW);
         sb.append(hundredWord);
     }
 

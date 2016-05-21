@@ -1,3 +1,8 @@
+v0.2.2
+======
+
+* Remove special casing for 100 in English (now “one hundred”)
+
 v0.2.1
 ======
 

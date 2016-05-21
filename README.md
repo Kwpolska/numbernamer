@@ -1,4 +1,4 @@
-Number Namer v0.2.1
+Number Namer v0.2.2
 ===================
 
 This is a very simple number namer, written in Java.
